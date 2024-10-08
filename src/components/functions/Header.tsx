@@ -22,8 +22,7 @@ const Header = () => {
             </Link>
             <div className="hidden md:flex space-x-4 mr-4">
               <Link href="/" className="text-blue-600 hover:text-blue-800 transition-colors">Home</Link>
-              <Link href="/forecast" className="text-blue-600 hover:text-blue-800 transition-colors">Forecast</Link>
-              <Link href="/maps" className="text-blue-600 hover:text-blue-800 transition-colors">Maps</Link>
+              <Link href="/weathermap" className="text-blue-600 hover:text-blue-800 transition-colors">Maps</Link>
               <Link href="/about" className="text-blue-600 hover:text-blue-800 transition-colors">About</Link>
             </div>
             <button onClick={toggleMenu} className="md:hidden text-blue-600 hover:text-blue-800 mr-4">
@@ -45,8 +44,7 @@ const Header = () => {
             <nav className="mt-8">
               <ul className="space-y-4">
                 <li><Link href="/" className="block text-2xl text-blue-600 hover:text-blue-800 transition-colors" onClick={toggleMenu}>Home</Link></li>
-                <li><Link href="/forecast" className="block text-2xl text-blue-600 hover:text-blue-800 transition-colors" onClick={toggleMenu}>Forecast</Link></li>
-                <li><Link href="/maps" className="block text-2xl text-blue-600 hover:text-blue-800 transition-colors" onClick={toggleMenu}>Maps</Link></li>
+                <li><Link href="/weathermap" className="block text-2xl text-blue-600 hover:text-blue-800 transition-colors" onClick={toggleMenu}>Maps</Link></li>
                 <li><Link href="/about" className="block text-2xl text-blue-600 hover:text-blue-800 transition-colors" onClick={toggleMenu}>About</Link></li>
               </ul>
             </nav>
