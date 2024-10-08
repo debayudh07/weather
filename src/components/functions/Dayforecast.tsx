@@ -37,13 +37,13 @@ const Dayforecast: React.FC = () => {
       );
       const dailyData = processForecastData(response.data.list);
       setForecastData(dailyData);
-    } catch (err) {
+    } catch {
       setError('Failed to fetch forecast data');
     }
   };
 
   // Function to process forecast data and extract one forecast per day
-  const processForecastData = (data: any[]): Forecast[] => {
+  const processForecastData = (data: { dt_txt: string; main: { temp_max: number; temp_min: number }; weather: { icon: string }[] }[]): Forecast[] => {
     const forecastByDay: Forecast[] = [];
     const noonForecasts = data.filter((item) => item.dt_txt.includes('12:00:00'));
 

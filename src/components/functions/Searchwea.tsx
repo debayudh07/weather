@@ -39,7 +39,7 @@ const Searchwea: React.FC = () => {
       const response = await axios.get(url);
       setWeatherData(response.data);
       setError(null);
-    } catch (err) {
+    } catch {
       setError("City not found or API error");
     }
   };

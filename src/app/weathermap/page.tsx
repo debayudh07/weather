@@ -96,7 +96,18 @@ function WeatherOverlay({
 export default function WeatherMapPage() {
   const [location, setLocation] = useState("New York");
   const [latLng, setLatLng] = useState<[number, number]>([40.7128, -74.006]);
-  const [weatherData, setWeatherData] = useState<any>(null);
+  interface WeatherData {
+    coord: {
+      lat: number;
+      lon: number;
+    };
+    weather: {
+      main: string;
+    }[];
+    name: string;
+  }
+
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [points, setPoints] = useState<[number, number][]>([]);
 
   const API_KEY = "904b3b12ba092ce98a74445951383a6d"; // Replace with your actual OpenWeatherMap API key
