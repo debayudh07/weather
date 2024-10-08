@@ -10,10 +10,10 @@ import Header from "@/components/functions/Header"
 
 export default function WeatherHomepage() {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   const [isLoaded, setIsLoaded] = useState(false)
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
 
   useEffect(() => {
     setIsLoaded(true)
